@@ -1,0 +1,26 @@
+            --- Tema3 ---
+         Pavel Calin Gabriel
+
+
+Task1: /api/v1/createCustomer
+
+json testare:
+{
+    "username": "Calin15",
+    "last_name": "Pavel",
+    "first_name": "Calin",
+    "phone": "123-456-7890",
+    "address": "Main St",
+    "city": "Brasov",
+    "postalCode": "12345",
+    "country": "Romania"
+}
+
+Task2: /api/v1/insertProduct
+
+{
+    "name": "Example Product",
+    "description": "This is an example product.",
+    "stock": 100,
+    "price": 29.99
+}
