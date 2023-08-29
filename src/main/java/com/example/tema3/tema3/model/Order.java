@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "`order`")
@@ -25,6 +26,11 @@ public class Order {
 
     String comments;
 
+    @OneToMany(mappedBy = "order")
+    List<OrderDetails> orderDetailsList;
+
     @ManyToOne
-    Customer customer_id;
+    @JoinColumn(name = "customer_id")
+    Customer customer;
+
 }

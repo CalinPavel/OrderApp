@@ -40,5 +40,4 @@ public class CustomerController {
 
         return ResponseEntity.ok(dto);
     }
-
 }

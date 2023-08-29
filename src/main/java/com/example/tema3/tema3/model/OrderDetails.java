@@ -1,11 +1,9 @@
 package com.example.tema3.tema3.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.Id;
 
 @Entity
 @Setter
@@ -22,4 +20,17 @@ public class OrderDetails {
 
     Double priceEach;
 
+    @ManyToOne
+    @JoinColumn(name = "code")
+    Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    Order order;
+
+    public OrderDetails(String product_code, Integer quantity, Double priceEach) {
+        this.product_code = product_code;
+        this.quantity = quantity;
+        this.priceEach = priceEach;
+    }
 }
